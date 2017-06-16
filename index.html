@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>SudoWhatSudo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=anton">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<style>
+a{
+    color: #0d110d;
+}
+a:hover {
+    color: #0d110d;
+}
+html,body,h2,h3,h4,h5 {
+    font-family: "Raleway", sans-serif;
+    letter-spacing:0.0em;
+    width:  100%;
+    height: 100%;
+    margin: 0;
+    padding:0;
+    overflow: :hidden}
+    .mainGreen{background-color: #00ffb1}
+    .secondGreen{background-color: #899b9d}
+    .sideBarText{color:#00ffb1;
+                font-family: "Anton", sans-serif;
+                letter-spacing:-0.1em}
+    .sideBarIcon{color:#00ffb1;
+                letter-spacing:-0.1em}
+    .black{background-color: #0d110d}
+    .white{background-color: #ffffff}
+    .img-circle {border-radius: 50%;}
+    h1{font-size: 50px;
+        color: #0d110d;
+        font-family: "Anton", sans-serif;
+        letter-spacing:-0.1em}
+    br aria-hidden:true;
+    
+    #shadow {
+        position: absolute;
+        top: 19em;
+        left: 50%;
+        margin-left: -1em;
+        width: 2em;
+        height: 1em;
+        background: #555;
+        border-radius: 50%;
+        -webkit-animation:   pulse .7s infinite     alternate;
+        -moz-animation:     pulse .7s infinite alternate;
+        -o-animation:       pulse .7s infinite alternate;
+        animation:          pulse .7s infinite alternate;
+    }
+
+    @-webkit-keyframes pulse {
+        0% { width: 2em; margin-left: -1em; background: #777;}
+        75% { width: 2.5em; margin-left: -1.25em; background: #555;}
+        100% { width: 3em; margin-left: -1.5em; background: #444;}
+    }
+    @-webkit-keyframes pulse {
+        0% { width: 2em; margin-left: -1em; background:   #777;}
+        75% { width: 2.5em; margin-left: -1.25em;background: #555; }
+        100% { width: 3em; margin-left: -1.5em; background: #444;}
+    }
+    @-moz-keyframes pulse {
+        0% { width: 2em; margin-left: -1em; background: #777;}
+        75% { width: 2.5em; margin-left: -1.25em; background: #555;}
+        100% { width: 3em; margin-left: -1.5em;background: #444; }
+    }
+    @-o-keyframes pulse {
+        0% { width: 2em; margin-left: -1em; background: #777;}
+        75% { width: 2.5em; margin-left: -1.25em;background: #555; }
+        100% { width: 3em; margin-left: -1.5em;background: #444; }
+    }
+    @keyframes pulse {
+        0% { width: 2em; margin-left: -1em; background: #777;}
+        75% { width: 2.5em; margin-left: -1.25em; background: #555;}
+        100% { width: 3em; margin-left: -1.5em;background: #444; }
+    }
+    
+    
+
+    #ball {
+        position: relative;
+        background-image: url("img/ball.png");
+        background-size: cover;
+        top: 3em;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        border: 5px solid #222;
+        margin: 0 auto;
+        z-index: 2;
+        -webkit-animation: bounce .7s cubic-bezier(.63,.09,.75,.46) infinite alternate;
+        -moz-animation:    bounce .7s cubic-bezier(.63,.09,.75,.46)  infinite alternate;
+        -o-animation:      bounce .7s cubic-bezier(.63,.09,.75,.46)  infinite alternate;
+        animation:         bounce .7s cubic-bezier(.63,.09,.75,.46)  infinite alternate;
+    }
+
+    @-webkit-keyframes bounce {
+        0%, 10% { top: 3em; height: 3em; width: 3em; }
+        15% { height: 3.15em; width: 2.9em; }
+        35% { height: 4em; width: 2.5em; }
+        75% { height: 4em; width: 2.5em; }
+        95% { height: 2em; width: 3.5em; }
+        100% { top: 18em; height: 1em; width: 3em; }
+    }
+    @-moz-keyframes bounce {
+        0%, 10% { top: 3em; height: 3em; width: 3em; }
+        15% { height: 3.15em; width: 2.9em; }
+        35% { height: 4em; width: 2.5em; }
+        75% { height: 4em; width: 2.5em; }
+        95% { height: 2em; width: 3.5em; }
+        100% { top: 18em; height: 1em; width: 3em; }
+    }
+    @-o-keyframes bounce {
+        0%, 10% { top: 3em; height: 3em; width: 3em; }
+        15% { height: 3.15em; width: 2.9em; }
+        35% { height: 4em; width: 2.5em; }
+        75% { height: 4em; width: 2.5em; }
+        95% { height: 2em; width: 3.5em; }
+        100% { top: 18em; height: 1em; width: 3em; }
+    }
+    @keyframes bounce {
+        0%, 10% { top: 3em; height: 3em; width: 3em; }
+        15% { height: 3.15em; width: 2.9em; }
+        35% { height: 4em; width: 2.5em; }
+        75% { height: 4em; width: 2.5em; }
+        95% { height: 2em; width: 3.5em; }
+        100% { top: 18em; height: 1em; width: 3em; }
+    }
+.logo-type {
+  font-family: menlo, monospace;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+}
+
+  .logo-type:before {
+    content: '➜ ';
+    color: #000;
+  }
+
+  .logo-type::first-letter {
+    color: #000;
+  }
+
+  .logo-type:after {
+    content: '▉';
+    color: #000;
+    animation: blink-animation 1s steps(1, start) infinite;
+  }
+
+@keyframes blink-animation {
+  from, to { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+    
+</style>
+<body class="white">
+    <div class = 'w3-container w3-top mainGreen w3-large w3-padding' style='z-index:4'>
+        <button class="w3-btn w3-hide-large w3-padding mainGreen" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+        <span class="w3-padding-0 w3-right" ><font color = "white"><i><b>Sudo what sudo</b></i></font></span>
+    </div>
+    <br>
+    <br>
+    <nav class="w3-sidenav w3-collapse secondGreen w3-animate-left" style="z-index:3;width:300px;margin-top:-5px" id="mySidenav"><br>
+        <div class="w3-container">
+            <div>
+                <img src="https://media.licdn.com/media/AAEAAQAAAAAAAAl0AAAAJDQ5YWZiODM2LTQ2MzYtNDExYy1hZDVmLWY0YzM3MWUwM2FlYQ.jpg" class="img-circle" alt="My face" height="64" width="64" style="border: 3px solid #222;border-color:#00ffb1; border-radius:50%;">
+				<div class="w3-center sideBarText">
+					<p1>James Daly <b>20</b></p1>
+					<br>
+					<p1>Games Dev Student</p1>
+                    <br>
+					<p1>Limerick Ireland</p1>
+				</div>
+            </div>
+            <div class="w3-col s8">
+                <span class = "logo-type">Menu...</span>
+            </div>
+        </div>
+        <div class="w3-container">
+        </div>
+        <a href="#" class="w3-padding-16 w3-hide-large w3-hoverable w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>	Close Menu</a>
+        <a href="#About" class="w3-padding"><i class="fa fa-book sideBarIcon"></i>	About Me</a>
+        <a href="#Pytron" class="w3-padding"><i class="fa fa-space-shuttle sideBarIcon"></i>	Pytron 3030</a>
+        <a href="#Fut" class="w3-padding"><i class="fa fa-futbol-o sideBarIcon"></i> Fut Scraper</a>
+        <a href="#Jump" class="w3-padding"><i class="fa fa-street-view sideBarIcon"></i> Project Jump</a>
+        <a href="#Sprawl" class="w3-padding"><i class="fa fa-cubes sideBarIcon"></i> Sprawl</a>
+        <a href="#Skills" class="w3-padding"><i class="fa fa-graduation-cap sideBarIcon"></i> Skills and Education</a>
+        <a href="#Articles" class="w3-padding"><i class="fa fa-newspaper-o sideBarIcon"></i> Articles I enjoyed</a>
+        <a href="#Contact" class="w3-padding"><i class="fa fa-bell fa-fw sideBarIcon"></i> Contact Me</a>
+    </nav>
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div id = "About"></div>
+    <div  class="w3-main" style="margin-left:300px;margin-top:-5px">
+        <a  href="#Pytron">
+        <div class="mySlides w3-display-container w3-center ">
+            <img alt="Pytron 30 30" src="./img/Deltron.jpg" style="width:100%;height:200px;">
+            <div class="w3-display-bottommiddle mainGreen w3-container" style = "height:10%">
+                <font color = "white"><p1>Pytron 3030</p1></font>   
+            </div>
+        </div>
+        </a>
+        <a  href="#Fut">
+        <div class="mySlides w3-display-container w3-center">
+            <img alt= "fut scrapper" src="./img/fut.jpg" style="width:100%;height:200px;">
+            <div class="w3-display-bottommiddle mainGreen w3-container" style = "height:10%">
+                <font color = "white"><p1>Fut Scrapper</p1></font>     
+            </div>
+        </div>
+        </a>
+        <a href="#Jump">
+        <div class="mySlides w3-display-container w3-center">
+            <img alt="Project jump" src="./img/projectjump.png" style="width:100%;height:200px;">
+            <div class="w3-display-bottommiddle mainGreen w3-container" style = "height:10%">
+                <font color = "white"><p1>Jump</p1></font>     
+            </div>    
+        </div>
+        </a>
+        <br>
+        
+        <div class="w3-display-container w3-center" style="padding-top: 40px; padding-bottom: 75px; margin-top: -40px; padding-left:25%; width:75%;" aria-hidden="true" data-aos="zoom-in" data-aos-duration="1000">
+            <br><br><h1 >About Me</h1><br>
+            <h5>Hello my name is James Daly. I am an Irish student currently studying <a href="http://www3.ul.ie/courses/ComputerGamesDevelopment.php">Computer Games Development in the University of limerick</a> and this is my portfolio website. Here is where I showcase all of my projects both past and present that I have chosen to continue developement on. I am an aspiring young programmer with a strong interest in video games and artificial intelligence. If nothing else I hope that you find my portfolio interesting.</h5><br><br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="w3-display-container w3-center anchor" id="Pytron" style="padding-top: 40px; margin-top: -40px" data-aos="fade-right" data-aos-duration="1000">
+            <div class = "animated lightSpeedIn">
+                <h1 >Pytron 3030</h1>
+                <a href="https://github.com/jamsiedaly/pytron3030/" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#000; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+            </div>
+            <p1>Use &#8592; and &#8594; to move. ENTER to fire</p1><br>
+            <canvas id="myCanvas" style = "position:relative;"></canvas><br>
+
+            <script>
+                var canvas = document.getElementById("myCanvas");
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight-75;
+                var sectionWidth = canvas.width/10;
+                var ctx = canvas.getContext("2d");
+                var fontSize = 30;
+                fontTemplate = "20px Arial";
+                
+                var spaceship = new Image();
+                spaceship.src = "img/spaceship.png";
+                var shipHeight = 200;
+                var shipWidth = 200;
+                var shipX = (canvas.width - shipWidth)/2;
+                var shipSpeed = 5;
+                
+                var x = canvas.width/2;
+                var y = canvas.height-30;
+                var dy = -10;
+                var ballRadius = 5;
+                
+                var enemy1v = true;
+                var enemy2v = true;
+                var alienSize = 50;
+                var alienY = 25;
+                var enemy1 = new Image();
+                enemy1.src = "img/alien.png";
+                var enemy2 = new Image();
+                enemy2.src = "img/alien.png";
+                
+                var python = new Image();
+                python.src = "img/python.png";
+                var pygame = new Image();
+                pygame.src = "img/pygame.gif";
+                
+                var stars = [];
+                
+                var rightPressed = false;
+                var leftPressed = false;
+                document.addEventListener("keydown", keyDownHandler, false);
+                document.addEventListener("keyup", keyUpHandler, false);
+                document.getElementById("myCanvas").style.background = "#000066";
+                
+                function keyDownHandler(e) {
+                    if(e.keyCode == 39) {
+                        rightPressed = true;
+                    }
+                    else if(e.keyCode == 37) {
+                        leftPressed = true;
+                    }
+                    else if(e.keyCode == 13) {
+                        y = canvas.height-shipHeight/2;
+                        x = shipX+shipWidth/2;
+                    }
+                }
+
+                function keyUpHandler(e) {
+                    if(e.keyCode == 39) {
+                        rightPressed = false;
+                    }
+                    else if(e.keyCode == 37) {
+                        leftPressed = false;
+                    }
+                }
+                
+                function drawBullet() {
+                    ctx.beginPath();
+                    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+                    ctx.fillStyle = "#FFFF66";
+                    ctx.fill();
+                    ctx.closePath();
+                }
+                
+                function drawEnemy1(v, w){
+                    if(v){
+                        ctx.drawImage(enemy1,w*3, alienY, alienSize,alienSize);
+                    }
+                    else{
+                        ctx.drawImage(python,w*3-125, alienY,canvas.width/6,canvas.width/6);
+                        ctx.fillStyle = "#ffffff";
+                        ctx.font = fontTemplate;
+                        ctx.fillText("Python;",w*2,alienY+w*2);
+                        ctx.fillText("I used Python 3.6,",w*2,alienY+w*2.5);
+                        ctx.fillText("The latest version",w*2,alienY+w*3);
+                        ctx.fillText("of the scripting language.",w*2,alienY+w*3.5);
+                    }
+                }
+                
+                
+                function drawEnemy2(v, w){
+                    if(v){
+                        ctx.drawImage(enemy1,w*7, alienY, alienSize,alienSize);
+                    }
+                    else{
+                        ctx.drawImage(pygame,w*7-125, alienY,canvas.width/4,canvas.width/6);
+                        ctx.fillStyle = "#ffffff";
+                        ctx.font = fontTemplate;
+                        ctx.fillText("Pygame;",w*5,alienY+w*2);
+                        ctx.fillText("A Python Library designed",w*5,alienY+w*2.5);
+                        ctx.fillText("For 2D games development.",w*5,alienY+w*3);
+                    }
+                }
+                
+                function drawShip(){
+                    ctx.beginPath();
+                    ctx.drawImage(spaceship,shipX,canvas.height-shipHeight,shipHeight,shipWidth);
+                    ctx.fill();
+                    ctx.closePath();
+                }
+                
+                function drawStars(){
+                    var count = 0;
+                    var iter = stars.length/2;
+                    for(count = 0; count<iter;count+=4){
+                        stars[count+1] += stars[count+2];
+                        ctx.fillStyle = "#f0f0a0";
+                        ctx.fillRect(stars[count],stars[count+1],stars[count+2],stars[count+2]);
+                    }
+                    if(stars[1] > canvas.height){
+                        stars.splice(0, 4);
+                    }
+                }
+                
+                function draw() {
+                    canvas.style.width ='100%';
+                    canvas.style.height='100%';
+                    //canvas.height = window.innerHeight-100;
+                    sectionWidth = canvas.width/10;
+                    fontTemplate = (canvas.width/40) + "px arial";
+                    if(Math.floor((Math.random() * 20) + 1) == 10){
+                        starX = Math.floor((Math.random() * canvas.width) + 1);
+                        speed = Math.floor((Math.random() * 4) + 1);
+                        colour = Math.floor((Math.random() * 16777215) + 1);
+                        myColour = parseInt(colour, 16);
+                        colourString = "#" + myColour.toString();
+                        starY = 0;
+                        
+                        stars.push(starX);
+                        stars.push(starY);
+                        stars.push(speed);
+                        stars.push(colourString);
+                    }
+                    if(y<alienY+alienSize && x < sectionWidth*3+alienSize && x > sectionWidth*3){
+                        enemy1v = false;
+                    }
+                    if(y<alienY+alienSize && x < sectionWidth*7+alienSize && x > sectionWidth*7){
+                        enemy2v = false;
+                    }
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    var counter = 0;
+                    var creep = 0.1;
+                    if(rightPressed && shipX < canvas.width-shipWidth) {
+                        shipX += shipSpeed;
+                        for(counter = 0;counter < stars.length;counter += 4)
+                        {
+                            stars[counter] -= stars[counter+2]*creep;
+                        }
+                    }
+                    else if(leftPressed && shipX > 0) {
+                        shipX -= shipSpeed;
+                        for(counter = 0;counter < stars.length;counter += 4)
+                        {
+                            stars[counter] += stars[counter+2]*creep;
+                        }
+                    }
+                    drawStars(canvas.width);
+                    drawEnemy1(enemy1v, sectionWidth);
+                    drawEnemy2(enemy2v, sectionWidth);
+                    drawBullet();
+                    drawShip();
+                    if(!enemy2v && !enemy1v){
+                        ctx.fillStyle = "#ffffff";
+                        ctx.fillText("Check it out on my github ",sectionWidth*4,canvas.height-15);
+                    }
+                    y += dy;
+                }setInterval(draw, 10);
+            </script>
+            <iframe title="Pytron thirty thirty game" src="https://ghbtns.com/github-btn.html?user=jamsiedaly&repo=pytron3030&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+        </div>
+        <br>
+        <div class="w3-display-container w3-center anchor" id="Fut" style="padding-top: 40px; margin-top: -40px;" data-aos="fade-left" data-aos-duration="1000">
+            <a href="https://github.com/jamsiedaly/SoccerPool/tree/master/PlayerParser" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#000; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+            <div class="w3-display-container w3-center" style="padding-top: 40px; padding-bottom: 75px; margin-top: -40px; padding-left:25%; width:75%;">
+            <h1>Fut Scrapper</h1>
+            <h5>This is a Python3.x application for retrieving all the latest statistics on Fifa Ultimate team players. It uses the requests python library to connect to over 650 different pages and the <a href="https://www.crummy.com/software/BeautifulSoup/">beautifulsoup library</a> to parse through all the HTML to provide the complete panel of clubs across more than 30 leagues. It has been multi-threaded to allow for maximum utilization of bandwidth. When run it will connect to the <a href="http://www.futhead.com/17/">Futhead</a> site and pull down all required information and create a directory of clubs and teams across all Fifa leagues. It is currently running off of Fifa 17.
+            </h5>
+            </div>
+                <div class = "w3-display-container" style = "height:400px;">
+                    <div class = "w3-display-container w3-center" style = "height:800px;">
+                        <div class="w3-display-container w3-left" style="width:25%">
+                         <img alt="parser" src="./img/leagues.PNG" style="width:100%;height:100%">
+
+                        </div>
+                        <div class="w3-display-container w3-left" style="width:25%">
+                         <img alt="parser" src="./img/team.png" style="width:100%;height:100%">
+                        </div>
+                        <div class="w3-display-container w3-right" style="width:25%">
+                         <img alt="parser" src="./img/soccerpool.gif" style="height:100%">
+                        </div>
+					<div class = "w3-display-container w3-right" style = "height:400px">
+                        <div id="ball" ></div>
+                        <div id="shadow"  ></div>
+                    </div>
+                    </div>
+        </div>
+                    <div class = "w3-display-container w3-center">
+                        <iframe title="Pytron thirty thirty game" src="https://ghbtns.com/github-btn.html?user=jamsiedaly&repo=pytron3030&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                    </div>
+        <div class="w3-display-container w3-center anchor" id="Jump" style="padding-top: 40px; margin-top: -40px;" data-aos="fade-right" data-aos-duration="1000">
+            <a href="https://github.com/jamsiedaly/ProjectJump" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#000; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+            <div class="w3-display-container w3-center" style="padding-top: 40px; padding-bottom: 75px; margin-top: -40px; padding-left:25%; width:75%;">
+            <h1>Project Jump</h1>
+            
+            <h5>An android game set in space where the player can jump, run and flip gravity to speed through a level.
+            </h5>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>[CONSTRUCTION]</h2>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="w3-display-container w3-center anchor" id="Sprawl" style="padding-top: 40px; margin-top: -40px;" data-aos="zoom-out" data-aos-duration="1000">
+            <a href="https://github.com/jamsiedaly/Hexmap" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="margin-bottom:-20px;fill:#000; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+            <div class="w3-display-container w3-center" style="padding-top: 40px; padding-bottom: 75px; margin-top: -40px; padding-left:25%; width:75%;">
+            <h1>Sprawl</h1>
+            <h5>A real time strategy game based around empire expansion on a hex based world.
+            </h5>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>[CONSTRUCTION]</h2>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <br>
+        <div class="w3-display-container w3-center" id="Skills" style="padding-top: 40px; margin-top: -40px;" data-aos="flip-right" data-aos-duration="1000">
+            <br><br>
+			<h1>Skills and Education</h1>
+            <br>
+            <h2>Languages</h2><br>
+            <p1>&#8226; Java</p1><br><br>
+            <p1>&#8226; Python3.x</p1><br><br>
+            <p1>&#8226; C#</p1><br><br>
+            <p1>&#8226; C++</p1><br><br>
+            <p1>&#8226; Javascript</p1><br><br>
+            <p1>&#8226; Typescript</p1><br><br>
+            <p1>&#8226; HTML5</p1><br><br>
+            <p1>&#8226; CSS</p1><br><br>
+            <p1>&#8226; SQL</p1><br><br>
+            
+            <h2>Technologies</h2><br>
+            <p1>&#8226; Unity</p1><br><br>
+            <p1>&#8226; Angular</p1><br><br>
+            <p1>&#8226; Spring</p1><br><br>
+            <p1>&#8226; Github</p1><br><br>
+			<p1>&#8226; QT </p1>
+			<p2>(using c++)</p2><br><br>
+            <p1>&#8226; Windows</p1><br><br>
+            
+            <h2>Education</h2><br>
+            <p1>&#8226; University of Limerick Computer Games Development 2018</p1><br><br>
+            <p1>&#8226; Banagher College Colaiste Na Sionna 2014</p1><br><br><br><br>
+        </div>
+        <br>
+		<div class="w3-display-container w3-center anchor" id="Articles" style="padding-top: 40px; margin-top: -40px;" data-aos="flip-left" data-aos-duration="1000">
+            <h1>Articles I enjoyed</h1>
+			<br>
+			<br>
+			<p1><a href="https://hackernoon.com/how-ages-faster-than-why-712e25c9eb3b#.teie2h6w5">""How" ages faster than "Why""</a> by Abdul Nimeri</p1>
+			<br>
+			<br>
+			<br>
+			<p1><a href="http://www.eurogamer.net/articles/valve-why-the-pc-is-the-future-article">"How Valve predicted the future of PC gaming in 2008"</a></p1>
+			<br>
+			<br>
+			<br>
+			<p1><a href="https://zedshaw.com/archive/indirection-is-not-abstraction/">"Indirection is not abstraction"</a> by  Zed A. Shaw</p1>
+            <br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+        </div>
+        <footer class="w3-display-container w3-center mainGreen" id="Contact" style="height:40%" data-aos="zoom-in-up" data-aos-duration="1000">
+            <br>
+            <br>
+            <h1><font color = "white">Contact Me</font></h1>
+            <br>
+            <br>
+            <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+            <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/james-daly-ab1754118" data-format="inline" data-related="false"></script>
+            <iframe title="Github link" align="right" src="https://ghbtns.com/github-btn.html?user=jamsiedaly&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="440px" height="60px"></iframe>
+            <br>
+            <br>
+            <br>
+            <p1 style="color:white">This website was built using Javascript, HTML, CSS, Awesome Fonts and Animate on Scroll</p1>
+        </footer>
+        
+    </div>
+
+<script>
+    
+AOS.init();  
+// Get the Sidenav
+var mySidenav = document.getElementById("mySidenav");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidenav, and add overlay effect
+function w3_open() {
+    if (mySidenav.style.display === 'block') {
+        mySidenav.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidenav.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidenav with the close button
+function w3_close() {
+    mySidenav.style.display = "none";
+    overlayBg.style.display = "none";
+}
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+}
+</script>
+
