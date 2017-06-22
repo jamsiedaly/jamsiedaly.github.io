@@ -217,7 +217,7 @@ html,body,h2,h3,h4,h5 {
     <div id = "About"></div>
     <div  class="w3-main mainSection">
         <a  href="#Pytron">
-        <div class="mySlides w3-display-container w3-center ">
+        <div class="mySlides w3-display-container w3-center " data-aos="zoom-out" data-aos-duration="1000">
             <img alt="Pytron 30 30" src="./img/Deltron.jpg" class="slide">
             <div class="w3-display-bottommiddle mainGreen w3-container" style = "height:10%">
                 <p1>Pytron 3030</p1>  
@@ -225,7 +225,7 @@ html,body,h2,h3,h4,h5 {
         </div>
         </a>
         <a  href="#Fut">
-        <div class="mySlides w3-display-container w3-center">
+        <div class="mySlides w3-display-container w3-center" data-aos="zoom-out" data-aos-duration="1000">
             <img alt= "fut scrapper" src="./img/fut.jpg" class="slide">
             <div class="w3-display-bottommiddle mainGreen w3-container" style = "height:10%">
                 <p1>Fut Scrapper</p1>    
@@ -233,7 +233,7 @@ html,body,h2,h3,h4,h5 {
         </div>
         </a>
         <a href="#Jump">
-        <div class="mySlides w3-display-container w3-center">
+        <div class="mySlides w3-display-container w3-center" data-aos="zoom-out" data-aos-duration="1000">
             <img alt="Project jump" src="./img/projectjump.png" class="slide">
             <div class="w3-display-bottommiddle mainGreen w3-container" style = "height:10%">
                 <p1>Jump</p1>    
@@ -630,10 +630,14 @@ function carousel() {
     var x = document.getElementsByClassName("mySlides");
     for (i = 0; i < x.length; i++) {
        x[i].style.display = "none";  
+       x[i].style.opacity = 1;
+       x[i].style.transition = " ";
     }
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
+    x[myIndex-1].style.display = "block"; 
+    x[myIndex-1].style.opacity = 1,
+    x[myIndex-1].style.transition = "opacity 0.5s linear";
     setTimeout(carousel, 4000);    
 }
 </script>
