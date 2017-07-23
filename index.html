@@ -86,6 +86,22 @@ html,body,h2,h3,h4,h5 {
         padding-top: 40px;
         margin-top: -40px;
     }
+    .clip-svg {
+        width: 0;
+        height: 0;
+    }
+    
+    img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    .polygon-clip-hexagon {
+            -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            -webkit-clip-path: url("#polygon-clip-hexagon");
+            clip-path: url("#polygon-clip-hexagon");
+        }
     
     h1{font-size: 50px;
         color: #242424;
@@ -562,28 +578,34 @@ html,body,h2,h3,h4,h5 {
             <div class="w3-display-container w3-center center-half">
             <h1>Sprawl</h1>
             <h5>A real time strategy game based around empire expansion on a hex based world.
+                Created in the unity game engine using C# mostly and some C++ for shaders and heavy lifting.
+                The game uses perlin noise and fractels to create a new and unique map every session.
             </h5>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <h2>[CONSTRUCTION]</h2>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <div style="width:100%;height:auto;">
+                <svg class="clip-svg">
+                  <defs>
+                    <clipPath id="polygon-clip-hexagon" clipPathUnits="objectBoundingBox">
+                      <polygon points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+
+                <div class="polygon-each-img-wrap" style="width:40%;display:inline">
+                  <img src="./img/sprawl.PNG" alt="demo-clip-heptagon" class="polygon-clip-hexagon" style="width:40%;display:inline">
+                </div>
+                <svg class="clip-svg">
+                  <defs>
+                    <clipPath id="polygon-clip-hexagon" clipPathUnits="objectBoundingBox">
+                      <polygon points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <div class="polygon-each-img-wrap" style="width:40%;display:inline">
+                  <img src="./img/sprawl2.PNG" alt="demo-clip-heptagon" class="polygon-clip-hexagon" style="width:40%;display:inline">
+                </div>
+            </div>
         </div>
         <br>
         <div class="w3-display-container w3-center project-header" id="Skills"  data-aos="flip-right" data-aos-duration="1000">
