@@ -91,6 +91,95 @@ html,body,h2,h3,h4,h5 {
         height: 0;
     }
     
+    #Grid{
+      margin-bottom: 40px;
+      text-align: justify;
+      font-size: 20px;
+    }
+
+    #Grid li{
+      text-align: center;
+      display: inline-block;
+      background: #eee;
+      width: 23%;
+      padding-top: 5%; /* Used instead of height to give elements fluid, width-based height */
+      padding-bottom: 5%;
+      margin-bottom: 2.5%;
+      list-style: none;
+      border-width: 10px;
+      border-color: #242424;
+      border-style: groove;
+        
+    }
+    
+    #Grid li:focus{
+      border-color: #00b429;
+    }
+    
+    #Grid li:hover{
+      border-color: #00b429;
+    }
+    
+    #Grid i{
+        display: block;
+        font-size: 80px;
+    }
+
+    #Grid:after{
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+
+    #Grid .placeholder{
+      padding: 0;
+    }
+    
+    @media (max-width: 800px){
+      #Grid li{
+        width: 31%;
+        padding-top: 31%;
+        margin-bottom: 3%;
+      }
+    }
+
+    /* 2 COL */
+
+    @media (max-width: 600px){
+      #Grid li{
+        width: 48%;
+        padding-top: 48%;
+        margin-bottom: 4%;
+      }
+    }
+
+    /* SINGLE COL */
+
+    @media (max-width: 400px){
+      #Grid li{
+        width: 100%;
+        padding-top: 100%;
+        margin-bottom: 5%;
+      }
+    }
+
+    #QT {
+        background-color: #41cd52;
+        color: white;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 15px;
+        font-size: 50px;
+        display:inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+        letter-spacing: 1px;
+        -webkit-transform:scale(2.0, 1.0);
+        -moz-transform:scale(2.0, 1.0);
+        -ms-transform:scale(2.0, 1.0);
+        -o-transform:scale(2.0, 1.0);
+        transform:scale(2.0,1.0);
+    }
+    
     img {
             max-width: 100%;
             height: auto;
@@ -316,25 +405,26 @@ html,body,h2,h3,h4,h5 {
 			<h1>Skills and Education</h1>
             <br>
             <h2>Languages</h2><br>
-            <p1>&#8226; <i class="devicon-java-plain colored"></i> Java</p1><br><br>
-            <p1>&#8226; <i class="devicon-python-plain colored"></i> Python3.x</p1><br><br>
-            <p1>&#8226; <i class="devicon-csharp-plain colored"></i> C#</p1><br><br>
-            <p1>&#8226; <i class="devicon-cplusplus-plain colored"></i>C++</p1><br><br>
-            <p1>&#8226; <i class="devicon-javascript-plain colored"></i> Javascript</p1><br><br>
-            <p1>&#8226; <i class="devicon-typescript-plain colored"></i> Typescript</p1><br><br>
-            <p1>&#8226; <i class="devicon-html5-plain colored"></i> HTML5</p1><br><br>
-            <p1>&#8226; <i class="devicon-css3-plain colored"></i> CSS</p1><br><br>
-            <p1>&#8226; <i class="devicon-mysql-plain colored"></i> SQL</p1><br><br>
-            
+            <ul id="Grid">
+                <li><i class="devicon-java-plain colored"></i> Java</li>
+                <li><i class="devicon-python-plain colored"></i> Python3.x</li>
+                <li><i class="devicon-csharp-plain colored"></i> C#</li>
+                <li><i class="devicon-cplusplus-plain colored"></i>C++</li>
+                <li><i class="devicon-javascript-plain colored"></i> Javascript</li>
+                <li><i class="devicon-typescript-plain colored"></i> Typescript</li>
+                <li><i class="devicon-html5-plain colored"></i> HTML5</li>
+                <li><i class="devicon-css3-plain colored"></i> CSS</li>
+                <li><i class="devicon-mysql-plain colored"></i> SQL</li>
+            </ul>
             <h2>Technologies</h2><br>
-            <p1>&#8226; Unity</p1><br><br>
-            <p1>&#8226; <i class="devicon-angularjs-plain colored"></i> Angular</p1><br><br>
-            <p1>&#8226; Spring</p1><br><br>
-            <p1>&#8226; <i class="devicon-github-plain colored"></i> Github</p1><br><br>
-			<p1>&#8226; QT </p1>
-			<p2>(using c++)</p2><br><br>
-            <p1>&#8226; <i class="devicon-windows8-original colored"></i> Windows</p1><br><br>
-            
+            <ul id="Grid">
+                <li><i class="fa fa-cube" aria-hidden="true"></i> Unity</li>
+                <li><i class="devicon-angularjs-plain colored"></i>  Angular</li>
+                <li><i class="fa fa-leaf" aria-hidden="true" style="color: chartreuse"></i> Spring</li>
+                <li><i class="devicon-github-plain colored"></i> Github</li>
+                <li><div style="display: block;"><h1 id="QT">Qt</h1></div>Qt<p2>(using c++)</p2></li>
+                <li><i class="devicon-windows8-original colored"></i> Windows</li>
+            </ul>
             <h2>Education</h2><br>
             <p1>&#8226; University of Limerick Computer Games Development 2018</p1><br><br>
             <p1>&#8226; Banagher College Colaiste Na Sionna 2014</p1><br><br><br><br>
