@@ -98,6 +98,7 @@ html,body,h2,h3,h4,h5 {
       margin-bottom: 40px;
       text-align: justify;
       font-size: 20px;
+      padding: 0;
     }
     
     img.unity-logo{
@@ -428,9 +429,16 @@ html,body,h2,h3,h4,h5 {
                 <li><i class="devicon-mysql-plain colored"></i> SQL</li>
             </ul>
             <h2>Technologies</h2><br>
-            <ul id="Grid">
-                <li style="padding-top: 1.5%;"><img src="img/unity-logo-rgb.png" class="unity-logo"> Unity</li>
-                <li><i class="devicon-angularjs-plain colored"></i>  Angular</li>
+            <ul id="Grid" onchange="copyNeighbourSize()" onload="copyNeighbourSize()" onresize="copyNeighbourSize()">
+                <li id="unity" style="padding-top: 1.5%;" ><img src="img/unity-logo-rgb.png" class="unity-logo"> Unity</li>
+                <script>
+                    function copyNeighbourSize(){
+                        var myNeighbour = document.getElementById(angular-logo);
+                        var unityLogo = document.getElementById(unity);
+                        unityLogo.style.height = myNeighbour.style.height;
+                    }
+                </script>
+                <li id="angular-logo"><i class="devicon-angularjs-plain colored"></i>  Angular</li>
                 <li><i class="fa fa-leaf" aria-hidden="true" style="color: chartreuse"></i> Spring</li>
                 <li><i class="devicon-github-plain colored"></i> Github</li>
                 <li><div style="display: block;"><h1 id="QT">Qt</h1></div>Qt<p2>(using c++)</p2></li>
@@ -825,9 +833,20 @@ function w3_close() {
     overlayBg.style.display = "none";
 }
 var myIndex = 0;
-carousel();
+copyNeighbourSize(); 
+window.onresize(){copyNeighbourSize()};    
+    
+function copyNeighbourSize(){
+    console.log("enters function");
+    var myNeighbour = document.getElementById("angular-logo");
+    var unityLogo = document.getElementById("unity");
+    console.log(unityLogo.style.height);
+    console.log(myNeighbour.style.height);
+    unityLogo.style.height = myNeighbour.style.height;
+}
+//carousel();
 
-function carousel() {
+/*function carousel() {
     var i;
     var x = document.getElementsByClassName("mySlides");
     for (i = 0; i < x.length; i++) {
@@ -841,6 +860,6 @@ function carousel() {
     x[myIndex-1].style.opacity = 1,
     x[myIndex-1].style.transition = "opacity 0.5s linear";
     setTimeout(carousel, 4000);    
-}
+}*/
 </script>
 
