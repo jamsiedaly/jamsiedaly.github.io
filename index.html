@@ -13,10 +13,13 @@
 <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 <style>
 a{
-    color: #0d110d;
+    color: #4ECDC4;
 }
-a:hover {
-    color: #0d110d;
+a:hover { 
+    color: #FF6B6B;
+}
+a:focus { 
+    color: #FF6B6B;
 }
 html,body,h2,h3,h4,h5 {
     font-family: "Raleway", sans-serif;
@@ -26,19 +29,18 @@ html,body,h2,h3,h4,h5 {
     margin: 0;
     padding:0;
     overflow: :hidden;
-    color: #242424}
+    color: #4ECDC4}
     h5{
         font-size: 25px;
     }
-    .mainGreen{background-color: #00b429}
-    .secondGreen{background-color: #eee}
-    .sideBarText{color:#00b429;
+    .mainGreen{background-color: #1A535C}
+    .white{background-color: #F7FFF7}
+    .sideBarText{color:#1A535C;
                 font-family: "Anton", sans-serif;
                 }
-    .sideBarIcon{color:#00b429;
+    .sideBarIcon{color:#1A535C;
                 letter-spacing:-0.1em}
     .black{background-color: #0d110d}
-    .white{background-color: #eee}
     .img-circle {border-radius: 50%;}
     .mainSection {margin-left:300px;
                     margin-top:-5px}
@@ -56,14 +58,17 @@ html,body,h2,h3,h4,h5 {
             padding-left:25%; 
             width:75%;}
     .github-svg{top: 53px;
-            fill:#242424; 
-            color:#eee; 
+            fill:#4ECDC4; 
+            color:#F7FFF7; 
             position: absolute; 
             border: 0; 
             right: 0;}
     .fut{
         flex-grow: 1;
         width: 25%;
+    }
+    .link{
+        color: #FF6B6B;
     }
     .futImage{
         height:inherit;
@@ -75,14 +80,14 @@ html,body,h2,h3,h4,h5 {
         margin-top:-5px;
         border-style:solid;
         border-width: 1px;
-        border-color: #242424;
+        border-color: #4ECDC4;
     }
     .w3-sidenav:hover{
-        box-shadow: 1px -1px 200px #242424;
+        box-shadow: 1px -1px 200px #4ECDC4;
     }
     .linkedin-picture{
         border: 6px solid #222;
-        border-color:#00b429;
+        border-color:#1A535C;
         border-radius:50%;
     }
     .project-header{
@@ -113,24 +118,24 @@ html,body,h2,h3,h4,h5 {
     #Grid li{
       text-align: center;
       display: inline-block;
-      background: #eee;
+      background: #F7FFF7;
       width: 23%;
       padding-top: 5%; /* Used instead of height to give elements fluid, width-based height */
       padding-bottom: 5%;
       margin-bottom: 2.5%;
       list-style: none;
       border-width: 10px;
-      border-color: #242424;
+      border-color: #4ECDC4;
       border-style: groove;
         
     }
     
     #Grid li:focus{
-      border-color: #00b429;
+      border-color: #FF6B6B;
     }
     
     #Grid li:hover{
-      border-color: #00b429;
+      border-color: #FF6B6B;
     }
     
     #Grid i{
@@ -225,7 +230,7 @@ html,body,h2,h3,h4,h5 {
     }
     
     h1{font-size: 50px;
-        color: #242424;
+        color: #4ECDC4;
         font-family: "Anton", sans-serif;
         letter-spacing:-0.05em;
         word-spacing: 20px}
@@ -327,21 +332,21 @@ html,body,h2,h3,h4,h5 {
   font-family: menlo, monospace;
   font-weight: 600;
   font-size: 18px;
-  color: #00b429;
+  color: #1A535C;
 }
 
   .logo-type:before {
     content: '➜ ';
-    color: #00b429;
+    color: #1A535C;
   }
 
   .logo-type::first-letter {
-    color: #00b429;
+    color: #1A535C;
   }
 
   .logo-type:after {
     content: '▉';
-    color: #00b429;
+    color: #1A535C;
     animation: blink-animation 1s steps(1, start) infinite;
   }
 
@@ -359,7 +364,7 @@ html,body,h2,h3,h4,h5 {
     </div>
     <br>
     <br>
-    <nav class="w3-sidenav w3-collapse secondGreen w3-animate-left" id="mySidenav"><br>
+    <nav class="w3-sidenav w3-collapse white w3-animate-left link" id="mySidenav"><br>
         <div class="w3-container">
             <div>
                 <img src="https://media.licdn.com/media/AAEAAQAAAAAAAAl0AAAAJDQ5YWZiODM2LTQ2MzYtNDExYy1hZDVmLWY0YzM3MWUwM2FlYQ.jpg" class="img-circle linkedin-picture" alt="My face" height="128" width="128">
@@ -416,7 +421,7 @@ html,body,h2,h3,h4,h5 {
         </a>-->
         <div class="w3-display-container w3-center about" aria-hidden="true" data-aos="fade-right" data-aos-duration="1000">
             <br><br><h1 >About Me</h1><br>
-            <h5>Hello my name is James Daly. I am an Irish student currently studying <a href="http://www3.ul.ie/courses/ComputerGamesDevelopment.php">Computer Games Development in the University of limerick</a> and this is my portfolio website. Here is where I showcase all of my projects both past and present that I have chosen to continue developement on. I'm currently interning at Fexco and I hope to graduate university in summer 2018 with a first class honours.</h5><br><br>
+            <h5>Hello my name is James Daly. I am an Irish student currently studying <a class="link" href="http://www3.ul.ie/courses/ComputerGamesDevelopment.php">Computer Games Development in the University of limerick</a> and this is my portfolio website. Here is where I showcase all of my projects both past and present that I have chosen to continue developement on. I'm currently interning at Fexco and I hope to graduate university in summer 2018 with a first class honours.</h5><br><br>
             <h2>My main interests are:</h2>
             <h5>
             <ul style="list-style:none">
@@ -653,7 +658,7 @@ html,body,h2,h3,h4,h5 {
             <a href="https://github.com/jamsiedaly/SoccerPool/tree/master/PlayerParser" class="github-corner" aria-label="View source on Github"><svg class="github-svg" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
             <div class="w3-display-container w3-center center-half">
             <h1>Fut Scraper</h1>
-            <h5>This is a Python3.x application for retrieving all the latest statistics on Fifa Ultimate team players. It uses the requests python library to connect to over 650 different pages and the <a href="https://www.crummy.com/software/BeautifulSoup/">beautifulsoup library</a> to parse through all the HTML to provide the complete panel of clubs across more than 30 leagues. It has been multi-threaded to allow for maximum utilization of bandwidth. When run it will connect to the <a href="http://www.futhead.com/17/">Futhead</a> site and pull down all required information and create a directory of clubs and teams across all Fifa leagues. It is currently running off of Fifa 17.
+            <h5>This is a Python3.x application for retrieving all the latest statistics on Fifa Ultimate team players. It uses the requests python library to connect to over 650 different pages and the <a class="link" href="https://www.crummy.com/software/BeautifulSoup/">beautifulsoup library</a> to parse through all the HTML to provide the complete panel of clubs across more than 30 leagues. It has been multi-threaded to allow for maximum utilization of bandwidth. When run it will connect to the <a class="link" href="http://www.futhead.com/17/">Futhead</a> site and pull down all required information and create a directory of clubs and teams across all Fifa leagues. It is currently running off of Fifa 17.
             </h5>
             </div>
                 <div class = "w3-display-container" style = "height:400px; margin-left: 10%; margin-right: 10%">
@@ -787,15 +792,15 @@ html,body,h2,h3,h4,h5 {
             <h1>Articles I enjoyed</h1>
 			<br>
 			<br>
-			<p1><a href="https://hackernoon.com/how-ages-faster-than-why-712e25c9eb3b#.teie2h6w5">""How" ages faster than "Why""</a> by Abdul Nimeri</p1>
+			<p1><a class="link" href="https://hackernoon.com/how-ages-faster-than-why-712e25c9eb3b#.teie2h6w5">""How" ages faster than "Why""</a> by Abdul Nimeri</p1>
 			<br>
 			<br>
 			<br>
-			<p1><a href="http://www.eurogamer.net/articles/valve-why-the-pc-is-the-future-article">"How Valve predicted the future of PC gaming in 2008"</a></p1>
+			<p1><a class="link" href="http://www.eurogamer.net/articles/valve-why-the-pc-is-the-future-article">"How Valve predicted the future of PC gaming in 2008"</a></p1>
 			<br>
 			<br>
 			<br>
-			<p1><a href="https://zedshaw.com/archive/indirection-is-not-abstraction/">"Indirection is not abstraction"</a> by  Zed A. Shaw</p1>
+			<p1><a class="link" href="https://zedshaw.com/archive/indirection-is-not-abstraction/">"Indirection is not abstraction"</a> by  Zed A. Shaw</p1>
             <br>
 			<br>
 			<br>
