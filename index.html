@@ -200,7 +200,7 @@ html,body,h2,h3,h4,h5 {
         color: white;
         border-bottom-right-radius: 15px;
         border-top-left-radius: 15px;
-        font-size: 50px;
+        font-size: 40px;
         display:inline-block;
         padding-left: 20px;
         padding-right: 20px;
@@ -333,37 +333,55 @@ html,body,h2,h3,h4,h5 {
         95% { height: 2em; width: 3.5em; }
         100% { top: 18em; height: 1em; width: 3em; }
     }
-.logo-type {
-  font-family: menlo, monospace;
-  font-weight: 600;
-  font-size: 18px;
-  color: #1A535C;
-}
+    .logo-type {
+      font-family: menlo, monospace;
+      font-weight: 600;
+      font-size: 18px;
+      color: #1A535C;
+    }
 
-  .logo-type:before {
-    content: '➜ ';
-    color: #1A535C;
-  }
+      .logo-type:before {
+        content: '➜ ';
+        color: #1A535C;
+      }
 
-  .logo-type::first-letter {
-    color: #1A535C;
-  }
+      .logo-type::first-letter {
+        color: #1A535C;
+      }
 
-  .logo-type:after {
-    content: '▉';
-    color: #1A535C;
-    animation: blink-animation 1s steps(1, start) infinite;
-  }
+      .logo-type:after {
+        content: '▉';
+        color: #1A535C;
+        animation: blink-animation 1s steps(1, start) infinite;
+      }
 
-@keyframes blink-animation {
-  from, to { opacity: 0 }
-  50% { opacity: 1 }
-}
-
+    @keyframes blink-animation {
+      from, to { opacity: 0 }
+      50% { opacity: 1 }
+    }
+    .top-nav{
+        z-index:4;
+    }
+    .interests{
+        list-style:none; 
+        padding-left: 0px;
+    }
+    .fa-leaf{
+        color: chartreuse;
+    }
+    #unity{
+        padding-top: 1.5%;
+    }
+    .octo-arm{
+        transform-origin: 130px 106px;
+    }
+    .fa-bars{
+        color:#FF6B6B;
+    }
     
 </style>
 <body class="white">
-    <div class = 'w3-container w3-top mainGreen w3-large w3-padding' style='z-index:4'>
+    <div class = 'w3-container w3-top mainGreen w3-large w3-padding top-nav'>
         <button class="w3-btn w3-hide-large w3-padding mainGreen" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
         <span class="w3-padding-0 w3-right top-title" ><i><b>Sudo what sudo</b></i></span>
     </div>
@@ -397,39 +415,15 @@ html,body,h2,h3,h4,h5 {
         <a href="#Articles" class="w3-padding"><i class="fa fa-newspaper-o sideBarIcon"></i> Articles I enjoyed</a>
         <a href="#Contact" class="w3-padding"><i class="fa fa-bell fa-fw sideBarIcon"></i> Contact Me</a>
     </nav>
-    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" title="close side menu" id="myOverlay"></div>
     <div id = "About"></div>
     <div  class="w3-main mainSection">
-        <!-- <a  href="#Pytron">
-        <div class="mySlides w3-display-container w3-center " data-aos="zoom-out" data-aos-duration="1000">
-            <img alt="Pytron 30 30" src="./img/Deltron.jpg" class="slide">
-            <div class="w3-display-bottommiddle mainGreen w3-container" style = "height:10%">
-                <p1>Pytron 3030</p1>  
-            </div>
-        </div>
-        </a>
-        <a  href="#Fut">
-        <div class="mySlides w3-display-container w3-center" data-aos="zoom-out" data-aos-duration="1000">
-            <img alt= "fut scrapper" src="./img/fut.jpg" class="slide">
-            <div class="w3-display-bottommiddle mainGreen w3-container" style = "height:10%">
-                <p1>Fut Scrapper</p1>    
-            </div>
-        </div>
-        </a>
-        <a href="#Jump">
-        <div class="mySlides w3-display-container w3-center" data-aos="zoom-out" data-aos-duration="1000">
-            <img alt="Project jump" src="./img/projectjump.png" class="slide">
-            <div class="w3-display-bottommiddle mainGreen w3-container" style = "height:10%">
-                <p1>Jump</p1>    
-            </div>    
-        </div>
-        </a>-->
         <div class="w3-display-container w3-center about" aria-hidden="true" data-aos="fade-right" data-aos-duration="1000">
             <br><br><h1 >About Me</h1><br>
             <h5>Hello my name is James Daly. I am an Irish student currently studying <a class="link" href="http://www3.ul.ie/courses/ComputerGamesDevelopment.php">Computer Games Development in the University of limerick</a> and this is my portfolio website. Here is where I showcase all of my projects both past and present that I have chosen to continue developement on. I'm currently interning at Fexco and I hope to graduate university in summer 2018 with a first class honours.</h5><br><br>
             <h2>My main interests are:</h2>
             <h5>
-            <ul style="list-style:none; padding-left: 0px">
+            <ul class="interests">
                 <li><i class="fa fa-user-circle" aria-hidden="true"></i>Artificial Intelligence</li><br>
                 <li><i class="fa fa-paint-brush" aria-hidden="true"></i>Frontend Web Development</li><br>
                 <li><i class="fa fa-btc" aria-hidden="true"></i>lockchain & Cryptocurrencies</li><br>
@@ -455,18 +449,11 @@ html,body,h2,h3,h4,h5 {
             </ul>
             <h2>Technologies</h2><br>
             <ul id="Grid" onchange="copyNeighbourSize()" onload="copyNeighbourSize()" onresize="copyNeighbourSize()">
-                <li id="unity" style="padding-top: 1.5%;" ><img src="img/unity-logo-rgb.png" class="unity-logo" align="middle"> Unity</li>
-                <script>
-                    function copyNeighbourSize(){
-                        var myNeighbour = document.getElementById(angular-logo);
-                        var unityLogo = document.getElementById(unity);
-                        unityLogo.style.height = myNeighbour.style.height;
-                    }
-                </script>
+                <li id="unity"><img src="img/unity-logo-rgb.png" class="unity-logo" align="middle"> Unity</li>
                 <li id="angular-logo"><i class="devicon-angularjs-plain colored"></i>  Angular</li>
-                <li><i class="fa fa-leaf" aria-hidden="true" style="color: chartreuse"></i> Spring</li>
+                <li><i class="fa fa-leaf" aria-hidden="true"></i> Spring</li>
                 <li><i class="devicon-github-plain colored"></i> Github</li>
-                <li><div style="display: block;"><h1 id="QT">Qt</h1></div>Qt<p2>(using c++)</p2></li>
+                <li><div><h1 id="QT">Qt</h1></div>Qt<p2>(using c++)</p2></li>
                 <li><i class="devicon-windows8-original colored"></i> Windows</li>
             </ul>
         </div>
@@ -474,7 +461,7 @@ html,body,h2,h3,h4,h5 {
         <div class="w3-display-container w3-center anchor project-header" id="Pytron" data-aos="fade-right" data-aos-duration="1000">
             <div class = "animated lightSpeedIn">
                 <h1 >Pytron 3030</h1>
-                <a href="https://github.com/jamsiedaly/pytron3030/" class="github-corner" aria-label="View source on Github"><svg class="github-svg" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+                <a href="https://github.com/jamsiedaly/pytron3030/" class="github-corner" aria-label="View source on Github"><svg class="github-svg" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
             </div>
             <p1>Use &#8592; and &#8594; to move. ENTER to fire</p1><br>
             <canvas id="myCanvas" style = "position:relative;"></canvas><br>
@@ -660,7 +647,7 @@ html,body,h2,h3,h4,h5 {
         </div>
         <br>
         <div class="w3-display-container w3-center anchor project-header" id="Fut" data-aos="fade-right" data-aos-duration="1000">
-            <a href="https://github.com/jamsiedaly/SoccerPool/tree/master/PlayerParser" class="github-corner" aria-label="View source on Github"><svg class="github-svg" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+            <a href="https://github.com/jamsiedaly/SoccerPool/tree/master/PlayerParser" class="github-corner" aria-label="View source on Github"><svg class="github-svg" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
             <div class="w3-display-container w3-center center-half">
             <h1>Fut Scraper</h1>
             <h5>This is a Python3.x application for retrieving all the latest statistics on Fifa Ultimate team players. It uses the requests python library to connect to over 650 different pages and the <a class="link" href="https://www.crummy.com/software/BeautifulSoup/">beautifulsoup library</a> to parse through all the HTML to provide the complete panel of clubs across more than 30 leagues. It has been multi-threaded to allow for maximum utilization of bandwidth. When run it will connect to the <a class="link" href="http://www.futhead.com/17/">Futhead</a> site and pull down all required information and create a directory of clubs and teams across all Fifa leagues. It is currently running off of Fifa 17.
@@ -696,7 +683,7 @@ html,body,h2,h3,h4,h5 {
             <br>
             <br>
         <div class="w3-display-container w3-center anchor" id="Sprawl" data-aos="fade-right" data-aos-duration="1000">
-        <a href="https://github.com/jamsiedaly/Hexmap" class="github-corner" aria-label="View source on Github"><svg class="github-svg" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+        <a href="https://github.com/jamsiedaly/Hexmap" class="github-corner" aria-label="View source on Github"><svg class="github-svg" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
         <div class="w3-display-container w3-center center-half">
         <h1>Sprawl</h1>
         <h5>A real time strategy game based around empire expansion on a hex based world.
@@ -759,7 +746,7 @@ html,body,h2,h3,h4,h5 {
             <br>
             <br>
         <div class="w3-display-container w3-center anchor project-header" id="Jump" data-aos="fade-right" data-aos-duration="1000">
-            <a href="https://github.com/jamsiedaly/ProjectJump" class="github-corner" aria-label="View source on Github"><svg class="github-svg" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+            <a href="https://github.com/jamsiedaly/ProjectJump" class="github-corner" aria-label="View source on Github"><svg class="github-svg" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
             <div class="w3-display-container w3-center-half">
             <h1>Jump</h1>
             
@@ -834,14 +821,12 @@ html,body,h2,h3,h4,h5 {
 
 <script>
     
-AOS.init();  
-// Get the Sidenav
+AOS.init();
+
 var mySidenav = document.getElementById("mySidenav");
 
-// Get the DIV with overlay effect
 var overlayBg = document.getElementById("myOverlay");
 
-// Toggle between showing and hiding the sidenav, and add overlay effect
 function w3_open() {
     if (mySidenav.style.display === 'block') {
         mySidenav.style.display = 'none';
@@ -852,7 +837,6 @@ function w3_open() {
     }
 }
 
-// Close the sidenav with the close button
 function w3_close() {
     mySidenav.style.display = "none";
     overlayBg.style.display = "none";
@@ -868,22 +852,4 @@ function copyNeighbourSize(){
     console.log(myNeighbour.style.height);
     unityLogo.style.height = myNeighbour.style.height;
 }
-//carousel();
-
-/*function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-       x[i].style.opacity = 1;
-       x[i].style.transition = " ";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block"; 
-    x[myIndex-1].style.opacity = 1,
-    x[myIndex-1].style.transition = "opacity 0.5s linear";
-    setTimeout(carousel, 4000);    
-}*/
 </script>
-
