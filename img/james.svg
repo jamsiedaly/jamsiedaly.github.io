@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300mm"
+   height="150mm"
+   viewBox="0 0 300 150"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="james.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="611.31586"
+     inkscape:cy="321.53028"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g4583"
+     showgrid="false"
+     height="209mm"
+     inkscape:window-width="1440"
+     inkscape:window-height="838"
+     inkscape:window-x="-8"
+     inkscape:window-y="26"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-147)">
+    <g
+       id="g4583">
+      <rect
+         transform="scale(-1)"
+         style="fill:#4ecdc4;fill-opacity:1;stroke-width:0.25515515"
+         y="-297.91666"
+         x="-300.75595"
+         height="75"
+         width="150"
+         id="rect3699" />
+      <rect
+         transform="scale(-1)"
+         id="rect3701"
+         width="150"
+         height="75"
+         x="-150.75595"
+         y="-222.91666"
+         style="fill:#ff6b6b;fill-opacity:1;stroke-width:0.25515515" />
+      <flowRoot
+         transform="matrix(0.67940067,0,0,1.2443292,2.0240802,119.78906)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;word-spacing:0px;opacity:0.98000004;fill:#1a535c;fill-opacity:1;stroke:none"
+         id="flowRoot4514"
+         xml:space="preserve"><flowRegion
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;fill:#1a535c;fill-opacity:1"
+           id="flowRegion4516"><rect
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;fill:#1a535c;fill-opacity:1"
+             y="3.4645286"
+             x="2.8571374"
+             height="283.46457"
+             width="566.92914"
+             id="rect4518" /></flowRegion><flowPara
+           id="flowPara4520">JAMES</flowPara></flowRoot>      <g
+         id="g4558">
+        <flowRoot
+           transform="matrix(0.67940067,0,0,1.2443292,167.57766,194.62835)"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;word-spacing:0px;fill:#1a535c;fill-opacity:1;stroke:none"
+           id="flowRoot4528"
+           xml:space="preserve"><flowRegion
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;fill:#1a535c;fill-opacity:1"
+             id="flowRegion4524"><rect
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;fill:#1a535c;fill-opacity:1"
+               y="3.4645286"
+               x="2.8571374"
+               height="283.46457"
+               width="566.92914"
+               id="rect4522" /></flowRegion><flowPara
+             id="flowPara4526">DALY</flowPara></flowRoot>      </g>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer3"
+       inkscape:label="Layer 2" />
+  </g>
+</svg>
