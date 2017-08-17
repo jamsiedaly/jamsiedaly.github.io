@@ -72,35 +72,41 @@
          x="-150.75595"
          y="-222.91666"
          style="fill:#ff6b6b;fill-opacity:1;stroke-width:0.25515515" />
-      <flowRoot
-         transform="matrix(0.67940067,0,0,1.2443292,2.0240802,119.78906)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;word-spacing:0px;opacity:0.98000004;fill:#1a535c;fill-opacity:1;stroke:none"
-         id="flowRoot4514"
-         xml:space="preserve"><flowRegion
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;fill:#1a535c;fill-opacity:1"
-           id="flowRegion4516"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;fill:#1a535c;fill-opacity:1"
-             y="3.4645286"
-             x="2.8571374"
-             height="283.46457"
-             width="566.92914"
-             id="rect4518" /></flowRegion><flowPara
-           id="flowPara4520">JAMES</flowPara></flowRoot>      <g
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.84514236px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;word-spacing:0px;opacity:0.98000004;fill:#1a535c;fill-opacity:1;stroke:none;stroke-width:0.91945535"
+         x="5.3665261"
+         y="157.00993"
+         id="text32"
+         transform="scale(0.73891646,1.353333)"><tspan
+           sodipodi:role="line"
+           x="5.3665261"
+           y="157.00993"
+           id="tspan30"
+           style="stroke-width:0.91945535"><tspan
+             x="5.3665261"
+             y="157.00993"
+             id="tspan28"
+             style="stroke-width:0.91945535">JAMES</tspan></tspan></text>
+      <g
          id="g4558">
-        <flowRoot
-           transform="matrix(0.67940067,0,0,1.2443292,167.57766,194.62835)"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;word-spacing:0px;fill:#1a535c;fill-opacity:1;stroke:none"
-           id="flowRoot4528"
-           xml:space="preserve"><flowRegion
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;fill:#1a535c;fill-opacity:1"
-             id="flowRegion4524"><rect
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;fill:#1a535c;fill-opacity:1"
-               y="3.4645286"
-               x="2.8571374"
-               height="283.46457"
-               width="566.92914"
-               id="rect4522" /></flowRegion><flowPara
-             id="flowPara4526">DALY</flowPara></flowRoot>      </g>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.84514236px;line-height:1.75;font-family:Aharoni;-inkscape-font-specification:Aharoni;letter-spacing:0px;word-spacing:0px;fill:#1a535c;fill-opacity:1;stroke:none;stroke-width:0.91945535"
+           x="229.41565"
+           y="212.30992"
+           id="text38"
+           transform="scale(0.73891646,1.353333)"><tspan
+             sodipodi:role="line"
+             x="229.41565"
+             y="212.30992"
+             id="tspan36"
+             style="stroke-width:0.91945535"><tspan
+               x="229.41565"
+               y="212.30992"
+               id="tspan34"
+               style="stroke-width:0.91945535">DALY</tspan></tspan></text>
+      </g>
     </g>
     <g
        inkscape:groupmode="layer"
