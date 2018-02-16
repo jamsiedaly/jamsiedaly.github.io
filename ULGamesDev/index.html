@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
 <title>UL Games Dev</title>
 <meta charset="UTF-8">
@@ -45,6 +45,7 @@
               filter: contrast(110%) brightness(190%);
       float: left;
       margin: 10%;
+	  margin-top: 6%;
     }
 
     .neon {
@@ -124,12 +125,21 @@
         font-weight: bold;
     }
     .maintext{
+		margin-top: 5%;
         width: 50%;
         margin-left: 25%;
         font-size: 2vw;
         text-align: center;
         align-content: center;
     }
+	.collage-div{
+		width: 50%;
+        margin-left: 25%;
+        font-size: 2vw;
+        text-align: center;
+        align-content: center;
+	}
+	
     .collage{
         width: 80%;
     }
@@ -156,15 +166,24 @@
     }
     .footer{
         margin: 10%;
-        border:5px solid white;
-
+        border:5px solid aliceblue;
+		background: black;
     }
     .footertext{
         margin: 5%;
     }
 
+	.heading{
+		background: black;
+	}
+	
+	.collage-bg{
+		background: black;
+		padding: 5%;
+	}
+	
     body {
-      background: black;
+      background: #5b2873;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -179,40 +198,50 @@
               align-items: center;
     }
 
+
     
 </style>
     
 <body>
   <div>
+  <div class = "heading">
     <div class="text-effect">
       <!-- Select the text in the preview and type in your own -->
-      <h1 class="neon" data-text="UL Game Jam 2018" contenteditable>UL Game Jam 2018</h1>
+      <h1 class="neon" data-text="UL Game Jam 24th March">UL Game Jam 24th March</h1>
       <div class="gradient"></div>
       <div class="spotlight"></div>
     </div>
+	<div class = "logo-bg">
       <image class = "logo" src="img/ULGAMEDEVSOC.svg"/>
+	</div>
+  </div>
     <div class="maintext">
       <p1>
-        The University of Limerick Games Development Society is hosting a Game Jam on the 24th of March 2018. The event will run from 10am to 10pm in the CSIS building on the UL campus. All game makers welcome. We accapt games of every kind wheter you choose to use an advanced engine like Unreal or you would like to keep it old school with arts and crafts, there'll be room for you at our game jam. Prizes and sponsors to be announced soon. Heres some pictures from our last jam.
+        The University of Limerick Games Development Society is hosting a Game Jam on the 24th of March 2018. 
+		<br/><br/>
+		The event will run from 10am to 10pm in the CSIS building on the UL campus. All game makers welcome. 
+		<br/><br/>
+		We accept games of every kind wheter you choose to use an advanced engine like Unreal or you would like to keep it old school with arts and crafts, there'll be room for you at our game jam. Prizes and sponsors to be announced soon. 
+		<br/><br/>
       </p1>  
-        <br>
-        <br>
-        <br>
-        <div>
-          <image class="collage" src="img/GameJamCollage.jpg">
-          </image>
-        </div>
     </div>
+	<div class="collage-bg">
+		<div class="collage-div">
+				<p1>
+				Here are some pictures from our last jam.
+				</p1>
+				<br/>
+			  <image class="collage" src="img/GameJamCollage.jpg">
+			  </image>
+			</div>
+	</div>
     <div class="footer">
       <div class="footertext">
         <h1>
           Contact us:
         </h1>
         <p1>
-          James Daly - Events Officer - jamsiedaly@gmail.com      
-        </p1>
-        <p1>
-          Joseph Greaney - Society President - ???      
+          James Daly - Events Officer - ulgamedevelopmentsociety@gmail.com     
         </p1>
       </div>
     </div>
