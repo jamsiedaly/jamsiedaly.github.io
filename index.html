@@ -16,7 +16,7 @@
   crossorigin="anonymous"></script>
 <style>
 a{
-    color: #4ECDC4;
+    color: black;
 }
 a:hover { 
     color: #FF6B6B;
@@ -32,22 +32,22 @@ html,body,h2,h3,h4,h5 {
     margin: 0;
     padding:0;
     overflow: :hidden;
-    color: #4ECDC4}
+    color: black}
     h5{
         font-size: 25px;
     }
     h1{
-        color: #1A535C !Important;
+        color: black !Important;
     }
-    .mainGreen{background-color: #1A535C}
+    .mainGreen{background-color: black}
     /* .white{background-color: #F7FFF7} */
     .white{background-color: #FFF}
-    .sideBarText{color:#1A535C;
+    .sideBarText{color: black;
                 font-family: "Anton", sans-serif;
                 }
-    .sideBarIcon{color:#1A535C;
+    .sideBarIcon{color:black;
                 letter-spacing:-0.1em}
-    .black{background-color: #0d110d}
+    .black{background-color: black}
     .img-circle {border-radius: 50%;}
     .mainSection {margin-left:300px;
                     margin-top:-5px}
@@ -65,8 +65,8 @@ html,body,h2,h3,h4,h5 {
             padding-left:25%; 
             width:75%;}
     .github-svg{top: 53px;
-            fill:#4ECDC4; 
-            color:#F7FFF7; 
+            fill: black; 
+            color: white; 
             position: absolute; 
             border: 0; 
             right: 0;}
@@ -87,10 +87,10 @@ html,body,h2,h3,h4,h5 {
         margin-top:-5px;
         border-style:solid;
         border-width: 1px;
-        border-color: #4ECDC4;
+        border-color: white;
     }
     .w3-sidenav:hover{
-        box-shadow: 1px -1px 200px #4ECDC4;
+        box-shadow: 1px -1px 200px black;
     }
     .linkedin-picture{
         border: 6px solid #222;
@@ -132,7 +132,7 @@ html,body,h2,h3,h4,h5 {
       margin-bottom: 2.5%;
       list-style: none;
       border-width: 10px;
-      border-color: #4ECDC4;
+      border-color: black;
       border-style: groove;
         
     }
@@ -237,7 +237,7 @@ html,body,h2,h3,h4,h5 {
     }
     
     h1{font-size: 50px;
-        color: #4ECDC4;
+        color: black;
         font-family: "Anton", sans-serif;
         letter-spacing:-0.05em;
         word-spacing: 20px}
@@ -344,21 +344,21 @@ html,body,h2,h3,h4,h5 {
       font-family: menlo, monospace;
       font-weight: 600;
       font-size: 18px;
-      color: #1A535C;
+      color: black;
     }
 
       .logo-type:before {
         content: '➜ ';
-        color: #1A535C;
+        color: black;
       }
 
       .logo-type::first-letter {
-        color: #1A535C;
+        color: black;
       }
 
       .logo-type:after {
         content: '▉';
-        color: #1A535C;
+        color: black;
         animation: blink-animation 1s steps(1, start) infinite;
       }
 
@@ -384,11 +384,11 @@ html,body,h2,h3,h4,h5 {
         transform-origin: 130px 106px;
     }
     .fa-bars{
-        color:#FF6B6B;
+        color: white;
     }
     .w3-sidenav a:hover, .w3-navblock a:hover {
     background-color: #ccc;
-    color: #FF6B6B;
+    color: black;
     }
     #james-logo{
         max-height: 53px;
@@ -397,20 +397,15 @@ html,body,h2,h3,h4,h5 {
     
 </style>
 <body class="white">
-    <div class = 'w3-container w3-top mainGreen w3-large w3-padding top-nav'>
-        <button class="w3-btn w3-hide-large w3-padding mainGreen" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
-        <span class="w3-padding-0 w3-right top-title" ><img id="james-logo" src="img/james.svg"></span>
-    </div>
-    <br>
     <br>
     <nav class="w3-sidenav w3-collapse white w3-animate-left link" id="mySidenav"><br>
         <div class="w3-container">
             <div>
-                <img src="img/profiler.jpg" class="img-circle linkedin-picture" alt="My face" height="128" width="128">
+                <img src="img/my-face.jpg" class="img-circle linkedin-picture" alt="My face" height="128" width="128">
 				<div class="w3-center sideBarText">
 					<p1>James Daly <b>21</b></p1>
 					<br>
-					<p1>Games Dev Student</p1>
+					<p1>Software Developer</p1>
                     <br>
 					<p1>Limerick Ireland</p1>
 				</div>
@@ -435,7 +430,7 @@ html,body,h2,h3,h4,h5 {
     <div  class="w3-main mainSection">
         <div class="w3-display-container w3-center about" aria-hidden="true" data-aos="fade-right" data-aos-duration="1250">
             <br><br><h1 >About Me</h1><br>
-            <h5>Hello my name is James Daly. I studied <a class="link" href="http://www3.ul.ie/courses/ComputerGamesDevelopment.php">Computer Games Development</a> at the University of Limerick and this is my portfolio website. Here is where I showcase some of my projects both past and present that I have chosen to continue developement on. I recently graduated college with a first class honours degree.</h5><br><br>
+            <h5>Hello my name is James Daly. I am a young developer developing. I enjoy making games in my free time. I'm a big believer in more agile forms of software and the growing area around domain driven design. If I can't see someone enjoy my doftware I have failed! Please enjoy my portfolio.</h5><br><br>
             <h2>Recent Achievements:</h2>
             <h5>
             <ul class="interests">
@@ -447,7 +442,8 @@ html,body,h2,h3,h4,h5 {
             <h5>
             <ul class="interests">
                 <li><i class="fa fa-user-circle" aria-hidden="true"></i>Artificial Intelligence</li><br>
-                <li><i class="fa fa-paint-brush" aria-hidden="true"></i>Frontend Web Development</li><br>
+                <li><i class="fa fa-paint-brush" aria-hidden="true"></i>
+                  Web Development</li><br>
                 <li><i class="fa fa-btc" aria-hidden="true"></i>lockchain & Cryptocurrencies</li><br>
                 <li><i class="fa fa-gamepad" aria-hidden="true"></i>Games Development</li><br>
             </ul>
